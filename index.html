@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/estilo.css">
+    <title>Cifra de césar</title>
+</head>
+<body>
+    <div id="tudo">
+        <div id="texto">
+            <h1>Criptografia</h1>
+            <p class="explicacao">Criptografia é uma prática que consiste em <b>codificar e/ou decodificar</b> mensagens. 
+                É usado para modificar uma mensagem original, fazendo que apenas aqueles que tem a chave da Criptografia consigam acessá-la.<br><br>
+                <span class="destaque">Aqui, apresento dois métodos de criptografia:</span><br>
+                <span class="destaque">1)</span> O método da <span class="destaque">Base 64</span>, onde o texto é transformado em dados binários, comumente usado para transferência de dados na internet.<br>
+                <span class="destaque">2)</span> O método da <span class="destaque">Cifra de César</span>, no qual usa-se um incremento, que será a chave para a substituição de cada caractere. 
+            </p>
+        </div><!--fim #texto-->
+        <form>
+            <div id="codDecod">
+                <div class="inputRadio">
+                    <input type="radio" name="codOrDecod" id="codificar" value="codificar" checked>
+                    <label for="codificar">Codificar</label>
+                </div>
+                <div class="inputRadio">
+                    <input type="radio" name="codOrDecod" id="decodificar" value="decodificar">
+                    <label for="decodificar">Decodificar</label><br>
+                </div>
+            </div><!--fim #codDecod-->
+            
+            <textarea type="message" id="mensagem" placeholder="Escreva sua mensagem..."></textarea>
+
+            <div id="metodos">
+                <div class="cadaMetodo">
+                    <h2>Base 64</h2>
+
+                    <button type="button" id="envioB64" onclick="base64()">Codificar em Base 64</button><br>
+                    <textarea id="respostaB64" placeholder="Resultado em base 64" readonly></textarea>
+                </div>
+                <div class="cadaMetodo">
+                    <h2>Cifra de césar</h2>
+
+                    <div id="divIncremento">
+                        <label for="incremento" id="labelIncremento">Selecione um incremento</label>
+                        <select id="incremento" name="incremento"></select>
+                    </div>
+                    <button type="button" id="envioCifra" onclick="cifraDeCesar()">Codificar em Cifra de César</button><br>
+                    <textarea id="respostaCifra" placeholder="Resultado em Cifra de César" readonly></textarea>
+                </div>
+            </div><!--fim #metodos-->
+        </form> <!--fim form-->
+    </div><!--fim #tudo-->
+
+    <!--SCRIPT EXTERNO-->
+    <script src="./javascript/script.js"></script>
+
+</body>
+</html>
