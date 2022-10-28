@@ -68,10 +68,10 @@ label {
 #mensagem {
     resize: none;
     width: 80%;
-    height: 80px;
+    height: 120px;
     padding: 10px;
     margin: 8px 0;
-    font-size: 25px;
+    font-size: 18px;
     text-align: center;
     color: white;
     border-radius: 5px;
@@ -80,13 +80,30 @@ label {
     box-shadow: 1px 1px 10px 1px rgba(255, 137, 27, 0.171);
 }
 
+#opcaoDecodificacao {
+    display: none;
+}
+
 #metodos {
     display: flex;
     align-items: end;
+    justify-content: center;
 }
 
-.cadaMetodo {
+.metodos {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.metodosNone {
+    display: none;
+}
+
+.metodoB64,
+.metodoCifra {
     padding: 10px;
+    width: -webkit-fill-available;
 }
 
 #divIncremento {
@@ -107,10 +124,10 @@ select {
 #respostaCifra {
     resize: none;
     width: 90%;
-    height: 80px;
+    height: 120px;
     padding: 10px;
     margin: 8px 0;
-    font-size: 25px;
+    font-size: 18px;
     color: white;
     text-align: center;
     border-radius: 5px;

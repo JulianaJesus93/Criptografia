@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/estilo.css">
-    <title>Cifra de césar</title>
+    <title>Criptografia</title>
 </head>
 <body>
     <div id="tudo">
@@ -30,16 +30,24 @@
                 </div>
             </div><!--fim #codDecod-->
             
-            <textarea type="message" id="mensagem" placeholder="Escreva sua mensagem..."></textarea>
+            <textarea type="message" id="mensagem" placeholder="Escreva sua mensagem..."></textarea><br>
+
+            <div id="opcaoDecodificacao">
+                <label for="opcao">Escolha o método de decodificação:</label>
+                <select id="opcao" name="opcao">
+                    <option value="base64" id="base64">Base64</option>
+                    <option value="cifraDeCesar" id="cifraDeCesar">Cifra de césar</option>
+                </select>
+            </div>
 
             <div id="metodos">
-                <div class="cadaMetodo">
+                <div class="metodoB64"> <!--para usar o script de só aparecer o selecionado no decod, precisa mudar o nome das divs-->
                     <h2>Base 64</h2>
 
                     <button type="button" id="envioB64" onclick="base64()">Codificar em Base 64</button><br>
                     <textarea id="respostaB64" placeholder="Resultado em base 64" readonly></textarea>
                 </div>
-                <div class="cadaMetodo">
+                <div class="metodoCifra">
                     <h2>Cifra de césar</h2>
 
                     <div id="divIncremento">
